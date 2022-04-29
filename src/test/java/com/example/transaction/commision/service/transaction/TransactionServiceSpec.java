@@ -5,7 +5,6 @@ import com.example.transaction.commision.common.exception.BadRequestException;
 import com.example.transaction.commision.configuration.dto.CommissionDtoBuilder;
 import com.example.transaction.commision.configuration.dto.ExchangeRateDtoBuilder;
 import com.example.transaction.commision.configuration.dto.TransactionDtoBuilder;
-import com.example.transaction.commision.repository.DummyDatabaseRepository;
 import com.example.transaction.commision.service.commissions.CommissionService;
 import com.example.transaction.commision.service.exchange.ExchangeRateService;
 import feign.RetryableException;
@@ -30,7 +29,7 @@ class TransactionServiceSpec {
     ExchangeRateService exchangeRateService;
 
     @Mock
-    DummyDatabaseRepository databaseRepository;
+    com.example.transaction.commision.repository.DummyStorage databaseRepository;
 
     @InjectMocks
     TransactionServiceImpl testedObj;

@@ -3,7 +3,6 @@ package com.example.transaction.commision.service.transaction;
 import com.example.transaction.commision.common.dto.CommissionDto;
 import com.example.transaction.commision.common.dto.TransactionDto;
 import com.example.transaction.commision.common.exception.BadRequestException;
-import com.example.transaction.commision.repository.DummyDatabaseRepository;
 import com.example.transaction.commision.service.commissions.CommissionService;
 import com.example.transaction.commision.service.exchange.ExchangeRateService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final CommissionService commissionsService;
     private final ExchangeRateService exchangeRateService;
-    private final DummyDatabaseRepository databaseRepository;
+    private final com.example.transaction.commision.repository.DummyStorage databaseRepository;
 
     @org.springframework.beans.factory.annotation.Value("${response.currency}")
     private String currency;

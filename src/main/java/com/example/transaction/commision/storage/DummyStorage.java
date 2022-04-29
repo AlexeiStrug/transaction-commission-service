@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@RequiredArgsConstructor
-public class DummyDatabaseRepository {
+public class DummyStorage {
     private List<TransactionDto> transactions = new ArrayList<>();
     private List<Integer> clientsWithDiscount = new ArrayList<>(42);
 

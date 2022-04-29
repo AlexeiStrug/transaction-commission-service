@@ -1,7 +1,6 @@
 package com.example.transaction.commision.service.commissions.calculation;
 
 import com.example.transaction.commision.common.dto.TransactionDto;
-import com.example.transaction.commision.repository.DummyDatabaseRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +12,7 @@ public class ClientDiscountRule implements Rule {
 
     private static final BigDecimal COMMISSION = BigDecimal.valueOf(0.05);
 
-    private final DummyDatabaseRepository databaseRepository;
+    private final com.example.transaction.commision.repository.DummyStorage databaseRepository;
 
     @Override
     public BigDecimal evaluate(TransactionDto dto) {

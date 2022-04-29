@@ -2,7 +2,6 @@ package com.example.transaction.commision.service.commissions;
 
 import com.example.transaction.commision.common.dto.CommissionDto;
 import com.example.transaction.commision.common.dto.TransactionDto;
-import com.example.transaction.commision.repository.DummyDatabaseRepository;
 import com.example.transaction.commision.service.commissions.calculation.ClientDiscountRule;
 import com.example.transaction.commision.service.commissions.calculation.HighTurnoverRule;
 import com.example.transaction.commision.service.commissions.calculation.PricingRule;
@@ -25,7 +24,7 @@ public class CommissionServiceImpl implements CommissionService {
     @org.springframework.beans.factory.annotation.Value("${response.currency}")
     private String currency;
 
-    public CommissionServiceImpl(final DummyDatabaseRepository dummyDatabaseRepository) {
+    public CommissionServiceImpl(final com.example.transaction.commision.repository.DummyStorage dummyDatabaseRepository) {
         rules.addAll(List.of(
                         new HighTurnoverRule(dummyDatabaseRepository),
                         new ClientDiscountRule(dummyDatabaseRepository),

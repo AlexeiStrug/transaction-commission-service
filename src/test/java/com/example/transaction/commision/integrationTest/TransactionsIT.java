@@ -5,7 +5,6 @@ import com.example.transaction.commision.common.response.ErrorResponse;
 import com.example.transaction.commision.configuration.IT;
 import com.example.transaction.commision.configuration.common.BaseIT;
 import com.example.transaction.commision.configuration.dto.TransactionDtoBuilder;
-import com.example.transaction.commision.repository.DummyDatabaseRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class TransactionsIT extends BaseIT {
 
     @Autowired
-    private DummyDatabaseRepository databaseRepository;
+    private com.example.transaction.commision.repository.DummyStorage databaseRepository;
 
     @BeforeEach
     void cleanUpDB() {
