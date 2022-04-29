@@ -2,7 +2,7 @@
 
 ## How to run it
 
-1. Using Maven + Spring Boot
+1. Using Maven
     ```
    mvn clean package (from console or from maven toolbar)
    java -jar target/transaction-commission-0.0.1-SNAPSHOT.jar
