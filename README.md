@@ -16,7 +16,7 @@
 ## How to use it
 
 * After starting application is running on the port **8080**.
-* Endpoint address is **http://localhost:8080/api/v1transactions/commissions** **POST** request
+* Endpoint address is **http://localhost:8080/api/v1/transactions/commissions** **POST** request
 * Request body example:
     ```
   {
