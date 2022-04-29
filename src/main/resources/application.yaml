@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: transaction-commission
+
+logging.level:
+  org.springframework: WARN
+  org.springframework.web.servlet: WARN
+  org.springframework.web.socket: WARN
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+response:
+  currency: EUR
